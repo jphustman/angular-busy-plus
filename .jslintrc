@@ -1,6 +1,5 @@
 {
-	"white": false,
-	"globals": {
-		"angular": true
-	}
+    "predef": [
+      "angular"
+    ]
 }

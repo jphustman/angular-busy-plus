@@ -7,7 +7,7 @@ $very-dark-gray: #333;
 $very-darker-gray: #555;
 
 
-.cg-busy {
+.cg-busy-plus {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -16,13 +16,13 @@ $very-darker-gray: #555;
   z-index: 1001;
 }
 
-.cg-busy-animation.ng-hide-add,
-.cg-busy-animation.ng-hide-remove {
+.cg-busy-plus-animation.ng-hide-add,
+.cg-busy-plus-animation.ng-hide-remove {
   display: block;
   transition: all .3s ease;
 }
 
-.cg-busy-animation.ng-hide-remove {
+.cg-busy-plus-animation.ng-hide-remove {
   opacity: 0;
   transform: translate(0, -40px);
 
@@ -32,7 +32,7 @@ $very-darker-gray: #555;
   }
 }
 
-.cg-busy-animation.ng-hide-add {
+.cg-busy-plus-animation.ng-hide-add {
   opacity: 1;
   transform: translate(0, 0);
 
@@ -42,28 +42,28 @@ $very-darker-gray: #555;
   }
 }
 
-.cg-busy-backdrop {
+.cg-busy-plus-backdrop {
   background-color: $white;
   opacity: .7;
 }
 
-.cg-busy-backdrop-animation.ng-hide-add,
-.cg-busy-backdrop-animation.ng-hide-remove {
+.cg-busy-plus-backdrop-animation.ng-hide-add,
+.cg-busy-plus-backdrop-animation.ng-hide-remove {
   display: block;
   transition: opacity .3s ease;
 }
 
-.cg-busy-backdrop-animation.ng-hide {
+.cg-busy-plus-backdrop-animation.ng-hide {
   opacity: 0;
 }
 
 // All styles below are for the default template.
 
-.cg-busy-default-wrapper {
+.cg-busy-plus-default-wrapper {
   text-align: center;
 }
 
-.cg-busy-default-sign {
+.cg-busy-plus-default-sign {
   background-color: $light-grayish-cyan;
   border: 1px solid $very-light-gray;
   border-radius: 7px;
@@ -79,7 +79,7 @@ $very-darker-gray: #555;
   z-index: 1002;
 }
 
-.cg-busy-default-text {
+.cg-busy-plus-default-text {
   color: $very-darker-gray;
   font-size: 16px;
   margin: 13px 12px 6px 49px;
@@ -87,7 +87,7 @@ $very-darker-gray: #555;
   text-align: left;
 }
 
-.cg-busy-default-spinner {
+.cg-busy-plus-default-spinner {
   display: inline-block;
   height: 25px;
   left: 14px;
@@ -96,7 +96,7 @@ $very-darker-gray: #555;
   width: 25px;
 
   div {
-    animation: cg-busy-spinner-anim 1s linear infinite;
+    animation: cg-busy-plus-spinner-anim 1s linear infinite;
     background: $black;
     border-radius: 50px;
     box-shadow: 0 0 3px rgba(0, 0, 0, .2);
@@ -169,7 +169,7 @@ $very-darker-gray: #555;
   }
 }
 
-@keyframes cg-busy-spinner-anim {
+@keyframes cg-busy-plus-spinner-anim {
   from {opacity: 1;}
   to {opacity: .25;}
 }

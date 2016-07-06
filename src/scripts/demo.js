@@ -1,20 +1,26 @@
 /*global angular */
 'use strict';
-angular.module('app', ['ngAnimate','cgBusy']);
+angular.module('app', ['ngAnimate','cgBusyPlus']);
 
-angular.module('app').controller('DemoCtrl',function($scope,$http){
+angular.module('app')
 
-	$scope.delay = 0;
-	$scope.minDuration = 0;
-	$scope.message = 'Please Wait...';
-	$scope.backdrop = true;
-	$scope.promise = null;
+.controller('DemoCtrl', [
+    '$scope',
+    '$http',
+    function(
+      $scope,
+      $http
+    ) {
 
-	$scope.demo = function(){
+      $scope.delay = 0;
+      $scope.minDuration = 0;
+      $scope.message = 'Please Wait...';
+      $scope.backdrop = true;
+      $scope.promise = null;
 
-		$scope.promise = $http.get('http://httpbin.org/delay/3');
+      $scope.demo = function(){
+        $scope.promise = $http.get('http://httpbin.org/delay/3');
+      };
 
-	};
 
-
-});
+}]);

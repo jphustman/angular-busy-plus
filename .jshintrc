@@ -1,5 +1,5 @@
 {
   "extends": ".jshintrc-base",
   "node": true,
-  "globals": {}
+  "predef": [ "angular" ]
 }
