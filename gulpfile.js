@@ -8,6 +8,7 @@ var wiredep = require('wiredep'),
     reload = browserSync.reload,
     config = require('./gulp.config')();
 
+
 function browserSyncInit(baseDir, files) {
     browserSync.instance = browserSync.init(files, {
         startPath: '/',
@@ -21,6 +22,7 @@ gulp.task('serve', function () {
     $.runSequence('clean',
         ['scripts', 'styles'],
         'inject',
+        'build',
         function () {
 
             browserSync({
@@ -41,6 +43,13 @@ gulp.task('serve', function () {
 // Production (builds dist folder)
 gulp.task('serve:dist', ['clean', 'build'], function () {
     browserSyncInit(config.dist);
+});
+
+gulp.task('build', function () {
+    return gulp.src(config.buildScriptsOrder)
+        .pipe($.concat('angular-busy-plus.js'))
+        .pipe(gulp.dest(config.dist + '/scripts'));
+
 });
 
 
