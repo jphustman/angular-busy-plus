@@ -23,7 +23,7 @@ angular.module("cgBusyPlus").provider("cgBusyPlusProfiles", function () {
                 return profiles[profileName];
             },
             keys: function () {
-                debugger;
+                // debugger;
                 var key,
                     keys = [];
                 Array.prototype.slice.call(profiles).every(function (profiles) {

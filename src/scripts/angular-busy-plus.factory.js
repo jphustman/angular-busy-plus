@@ -80,7 +80,7 @@ angular.module("cgBusyPlus").factory("_cgBusyPlusTrackerFactory", [
                 var then = promiseThing && (promiseThing.then || promiseThing.$then ||
                         (promiseThing.$promise && promiseThing.$promise.then));
 
-                    debugger;
+                    // debugger;
                 return typeof then !== "undefined";
             };
 

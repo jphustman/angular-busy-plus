@@ -84,7 +84,7 @@ angular.module("cgBusyPlus").factory("_cgBusyPlusTrackerFactory", [
                 var then = promiseThing && (promiseThing.then || promiseThing.$then ||
                         (promiseThing.$promise && promiseThing.$promise.then));
 
-                    debugger;
+                    // debugger;
                 return typeof then !== "undefined";
             };
 
@@ -163,7 +163,7 @@ angular.module("cgBusyPlus").provider("cgBusyPlusProfiles", function () {
                 return profiles[profileName];
             },
             keys: function () {
-                debugger;
+                // debugger;
                 var key,
                     keys = [];
                 Array.prototype.slice.call(profiles).every(function (profiles) {
@@ -323,7 +323,7 @@ angular.module("cgBusyPlus").directive("cgBusyPlus", [
                     };
 
                     templateScope.$applyNormalCgBusyPlus = function (indicatorTemplate, errorTemplate) {
-                        debugger;
+                        // debugger;
                         // replacing the top one
                         options.backdrop = typeof options.backdrop === "undefined"
                             ? true

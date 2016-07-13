@@ -134,7 +134,7 @@ angular.module("cgBusyPlus").directive("cgBusyPlus", [
                     };
 
                     templateScope.$applyNormalCgBusyPlus = function (indicatorTemplate, errorTemplate) {
-                        debugger;
+                        // debugger;
                         // replacing the top one
                         options.backdrop = typeof options.backdrop === "undefined"
                             ? true
