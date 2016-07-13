@@ -1,7 +1,7 @@
 {
   "name": "angular-busy-plus",
   "main": "angular-busy.js",
-  "version": "4.1.5",
+  "version": "4.1.6",
   "description": "",
   "repository": {
     "type": "git",
@@ -45,6 +45,7 @@
     "devTest": "karma start karma.conf.js",
     "test": "karma start --browsers Firefox --single-run"
   },
+  "main": "./dist/scripts/angular-busy-plus.js",
   "eslintConfig": {
     "env": {
       "globals": {
